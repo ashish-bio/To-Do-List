@@ -7,19 +7,43 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body
-    class="bg-neutral-900 text-white flex justify-center items-center h-screen"
+    class="bg-gray-300 text-gray-800 flex justify-center items-center h-screen dark:bg-slate-800 dark:text-slate-700"
   >
-    <div class="containere bg-neutral-700 rounded-md">
-      <h1 class="text-center font-bold text-2xl">To-Do List</h1>
-      <div class="input-container p-2.5 text-center">
+    <div class="bg-gray-100 rounded-md dark:bg-slate-600">
+      <h1 class="text-center font-bold text-2xl dark:text-slate-200">
+        To-Do List
+      </h1>
+      <button
+        id="toggle-theme"
+        class="absolute top-4 left-4 p-2 rounded-md text-slate-100 bg-slate-500 hover:bg-gray-400 dark:bg-slate-300 dark:hover:bg-slate-200 dark:text-slate-600"
+      >
+        <svg
+          class="w-6 h-6"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 21a9 9 0 0 1-.5-17.986V3c-.354.966-.5 1.911-.5 3a9 9 0 0 0 9 9c.239 0 .254.018.488 0A9.004 9.004 0 0 1 12 21Z"
+          />
+        </svg>
+      </button>
+      <div class="p-2.5 text-center">
         <input
-          class="bg-neutral-500 rounded-md p-3 m-0.5 border-none"
+          class="bg-neutral-200 rounded-md p-3 m-0.5 border-none placeholder-gray-800"
           type="text"
           id="todo-input"
           placeholder="Add a new task..."
         />
         <button
-          class="font-bold bg-purple-600 hover:bg-purple-700 rounded-md p-3 m-0.5 border-none"
+          class="font-bold bg-green-500 hover:bg-green-600 rounded-md p-3 m-0.5 text-black dark:text-white border-none"
           id="add-task-btn"
         >
           Add Task
